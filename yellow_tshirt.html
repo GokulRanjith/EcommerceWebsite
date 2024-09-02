@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="css/product-details.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        
+            body{
+                font-family:poppins;
+            }
+    </style>
+    <!------Font-awesome-for-icons------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+<body>
+  <section class="product-page">
+    <div class="product-details">
+        <!----img------>
+        <div class="product-img">
+        <!----Swiper----->
+        <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <!-----**1**---->
+            <div class="swiper-slide">
+                <img src="images/product_1.jpg"/>
+            </div>
+            <!-----**2**---->
+            <div class="swiper-slide">
+                <img src="images/product_1-a.jpg"/>
+            </div>
+            <!-----**3**---->
+            <div class="swiper-slide">
+                <img src="images/p-1.png"/>
+            </div>
+            <!-----**4**---->
+            <div class="swiper-slide">
+                <img src="images/product_1.jpg"/>
+            </div>
+            
+    </div>
+    <!-----btns----->
+    <div class="slider-btns">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    </div>
+            <!-----social---->
+            <div class="img-social-bar">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <!------text---->
+        <div class="product-text">
+            <!-----category---->
+            <span class="product-category">Clothes</span>
+            <!-----title----->
+            <h3>Drawstring T-Shirt </h3>
+            <!-----price----->
+            <span class="product-price">$22.00</span>
+            <!-----details----->
+            <p><b>Product Description:</b> Upgrade your wardrobe with our stylish mustard yellow t-shirt, perfect for any casual occasion. Made from premium quality fabric, this t-shirt is designed to provide ultimate comfort and durability. Its vibrant color adds a pop of style to any outfit, making it a great addition to your everyday wear.
+            <br><br>
+            <b>Key Features:</b>
+            <br>
+            <li><b>Material: </b>Soft and breathable cotton blend for all-day comfort.</li>
+            <li><b>Fit: </b>Classic fit with a relaxed feel, perfect for layering or wearing on its own.</li>
+          <li><b>Design: </b>Plain mustard yellow with a crew neck and short sleeves.</li>
+        <li><b>Versatile Style: </b>Easily pairs with jeans, shorts, or joggers for a trendy, casual look.</li>
+      <li><b>Care Instructions: </b>Machine washable for easy maintenance.</li><p>Whether you're heading out for a casual meet-up or just lounging at home, this t-shirt will keep you looking effortlessly stylish. Add it to your cart now and experience the perfect blend of comfort and fashion!</p></p>
+            <!----size-container---->
+            <div class="product-size-container">
+                <strong>Select Size:</strong>
+                <!----size----->
+                <div class="product-size">
+                    <!----XL---->
+                    <input type="checkbox" class="s-checkbox" id="s-xl">
+                    <label for="s-xl" class="s-label">XL</label>
+                    <!----Small---->
+                    <input type="checkbox" class="s-checkbox" id="s-s">
+                    <label for="s-s" class="s-label">S</label>
+                    <!----Medium---->
+                    <input type="checkbox" class="s-checkbox" id="s-m">
+                    <label for="s-m" class="s-label">M</label>
+                    <!----Large---->
+                    <input type="checkbox" class="s-checkbox" id="s-l">
+                    <label for="s-l" class="s-label">L</label>
+                </div>
+            </div>
+            <!----btns----->
+            <div class="product-buttons">
+                <a href="#" class="add-bag-btn">Add to Cart</a>
+                <a href="#" class="add-wishlist-btn">Add to Wishlist</a>
+            </div>
+            <!-----help-btn----->
+            <a href="#" class="help-btn">Need Any Help?</a>
+        </div>
+    </div>
+  </section> 
+  
+  
+
+
+<!------JQuery------------->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+  <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script type="text/javascript">
+    $('.s-checkbox').on('change',function(){
+        $('.s-checkbox').not(this).prop('checked',false);
+    });
+
+    //Swiper Script
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        //after 450px screen slide pre view is "1"
+        450: {//apply after 820px and until before 450px
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        820: {//apply after 1024px and until before 820px
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        1024: {//apply before 1024px screen width
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+      },
+    });
+  </script>
+
+ 
+
+</body>
+</html>

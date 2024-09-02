@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="css/product-details.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        
+            body{
+                font-family:poppins;
+            }
+            .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    object-position: center;
+    
+}
+    </style>
+    <!------Font-awesome-for-icons------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+<body>
+  <section class="product-page">
+    <div class="product-details">
+        <!----img------>
+        <div class="product-img">
+        <!----Swiper----->
+        <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <!-----**1**---->
+            <div class="swiper-slide">
+                <img src="images/p-7.png"/>
+            </div>
+            <!-----**2**---->
+            <div class="swiper-slide">
+                <img src="images/product_7-a.jpg"/>
+            </div>
+            <!-----**3**---->
+            <div class="swiper-slide">
+                <img src="images/p-7.png"/>
+            </div>
+            <!-----**4**---->
+            <div class="swiper-slide">
+                <img src="images/product_7-a.jpg"/>
+            </div>
+            
+    </div>
+    <!-----btns----->
+    <div class="slider-btns">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    </div>
+            <!-----social---->
+            <div class="img-social-bar">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <!------text---->
+        <div class="product-text">
+            <!-----category---->
+            <span class="product-category">Clothes</span>
+            <!-----title----->
+            <h3>Porsche Martini SweatJacket </h3>
+            <!-----price----->
+            <span class="product-price">$140.00</span>
+            <!-----details----->
+            <p><b>Product Description:</b> Introducing the sleek and stylish red Porsche sweatshirt, a perfect blend of comfort and high-performance fashion. This sweatshirt is designed for those who appreciate luxury and want to make a bold statement with their wardrobe.
+              <br><br>
+              <b>Key Features:</b>
+              <br>
+              <li><b>Material: </b>Made from premium quality cotton, this sweatshirt ensures maximum comfort and durability.</li>
+              <li><b>Fit: </b>Tailored to fit perfectly, this sweatshirt provides a snug, flattering silhouette without compromising on comfort.</li>
+            <li><b>Design: </b>The minimalist design features a clean, solid red color that stands out. The back of the sweatshirt is adorned with a subtle yet iconic Porsche logo, reflecting its automotive heritage.</li>
+          <li><b>Versatile: </b> Perfect for both casual outings and motorsport events, this sweatshirt is a versatile addition to your wardrobe.</li>
+        <p>Whether you're a Porsche enthusiast or simply love stylish and comfortable clothing, this sweatshirt is a must-have. Pair it with your favorite jeans for a laid-back look, or dress it up with chinos for a more refined style.</p></p>
+            <!----size-container---->
+            <div class="product-size-container">
+                <strong>Select Size:</strong>
+                <!----size----->
+                <div class="product-size">
+                    <!----XL---->
+                    <input type="checkbox" class="s-checkbox" id="s-xl">
+                    <label for="s-xl" class="s-label">XL</label>
+                    <!----Small---->
+                    <input type="checkbox" class="s-checkbox" id="s-s">
+                    <label for="s-s" class="s-label">S</label>
+                    <!----Medium---->
+                    <input type="checkbox" class="s-checkbox" id="s-m">
+                    <label for="s-m" class="s-label">M</label>
+                    <!----Large---->
+                    <input type="checkbox" class="s-checkbox" id="s-l">
+                    <label for="s-l" class="s-label">L</label>
+                </div>
+            </div>
+            <!----btns----->
+            <div class="product-buttons">
+                <a href="#" class="add-bag-btn">Add to Cart</a>
+                <a href="#" class="add-wishlist-btn">Add to Wishlist</a>
+            </div>
+            <!-----help-btn----->
+            <a href="#" class="help-btn">Need Any Help?</a>
+        </div>
+    </div>
+  </section> 
+  
+  
+
+
+<!------JQuery------------->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+  <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script type="text/javascript">
+    $('.s-checkbox').on('change',function(){
+        $('.s-checkbox').not(this).prop('checked',false);
+    });
+
+    //Swiper Script
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        //after 450px screen slide pre view is "1"
+        450: {//apply after 820px and until before 450px
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        820: {//apply after 1024px and until before 820px
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        1024: {//apply before 1024px screen width
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+      },
+    });
+  </script>
+
+ 
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="css/product-details.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        
+            body{
+                font-family:poppins;
+            }
+    </style>
+    <!------Font-awesome-for-icons------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+<body>
+  <section class="product-page">
+    <div class="product-details">
+        <!----img------>
+        <div class="product-img">
+        <!----Swiper----->
+        <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <!-----**1**---->
+            <div class="swiper-slide">
+                <img src="images/product_8.jpg"/>
+            </div>
+            <!-----**2**---->
+            <div class="swiper-slide">
+                <img src="images/product_8-a.jpg"/>
+            </div>
+            <!-----**3**---->
+            <div class="swiper-slide">
+                <img src="images/product_8.jpg"/>
+            </div>
+            <!-----**4**---->
+            <div class="swiper-slide">
+                <img src="images/product_8-a.jpg"/>
+            </div>
+            
+    </div>
+    <!-----btns----->
+    <div class="slider-btns">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    </div>
+            <!-----social---->
+            <div class="img-social-bar">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <!------text---->
+        <div class="product-text">
+            <!-----category---->
+            <span class="product-category">Clothes</span>
+            <!-----title----->
+            <h3>Western Trench Coat </h3>
+            <!-----price----->
+            <span class="product-price">$150.00</span>
+            <!-----details----->
+            <p><b>Product Description:</b>Elevate your outerwear collection with this classic beige trench coat, a timeless piece that exudes elegance and sophistication. Crafted from high-quality materials, this trench coat is designed to keep you warm while ensuring you look effortlessly stylish.
+              <br><br>
+              <b>Key Features:</b>
+              <br>
+              <li><b>Material: </b>Made from premium, durable fabric that offers warmth and comfort, perfect for layering during cooler months.</li>
+              <li><b>Design: </b>The double-breasted front, complete with a matching belt, provides a tailored silhouette that flatters any body shape. The coat also features epaulettes on the shoulders, adding a touch of military-inspired style.</li>
+            <li><b>Details: </b>Functional pockets, a wide lapel collar, and adjustable cuffs complete the look, ensuring you’re ready for any occasion, whether it’s a day at the office or a night out.</li>
+          <li><b>Versatility: </b>The neutral beige color makes this trench coat a versatile addition to your wardrobe, easily pairing with both casual and formal outfits.</li>
+        <p>This beige trench coat is a must-have for any fashion-conscious individual looking to invest in a piece that will never go out of style. Pair it with your favorite boots and a scarf for a complete, polished look.</p></p>
+            <!----size-container---->
+            <div class="product-size-container">
+                <strong>Select Size:</strong>
+                <!----size----->
+                <div class="product-size">
+                    <!----XL---->
+                    <input type="checkbox" class="s-checkbox" id="s-xl">
+                    <label for="s-xl" class="s-label">XL</label>
+                    <!----Small---->
+                    <input type="checkbox" class="s-checkbox" id="s-s">
+                    <label for="s-s" class="s-label">S</label>
+                    <!----Medium---->
+                    <input type="checkbox" class="s-checkbox" id="s-m">
+                    <label for="s-m" class="s-label">M</label>
+                    <!----Large---->
+                    <input type="checkbox" class="s-checkbox" id="s-l">
+                    <label for="s-l" class="s-label">L</label>
+                </div>
+            </div>
+            <!----btns----->
+            <div class="product-buttons">
+                <a href="#" class="add-bag-btn">Add to Cart</a>
+                <a href="#" class="add-wishlist-btn">Add to Wishlist</a>
+            </div>
+            <!-----help-btn----->
+            <a href="#" class="help-btn">Need Any Help?</a>
+        </div>
+    </div>
+  </section> 
+  
+  
+
+
+<!------JQuery------------->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script type="text/javascript">
+    $('.s-checkbox').on('change',function(){
+        $('.s-checkbox').not(this).prop('checked',false);
+    });
+
+    //Swiper Script
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        //after 450px screen slide pre view is "1"
+        450: {//apply after 820px and until before 450px
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        820: {//apply after 1024px and until before 820px
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        1024: {//apply before 1024px screen width
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+      },
+    });
+  </script>
+
+ 
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="css/product-details.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        
+            body{
+                font-family:poppins;
+            }
+    .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    object-position: center;
+}
+    </style>
+    <!------Font-awesome-for-icons------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+<body>
+  <section class="product-page">
+    <div class="product-details">
+        <!----img------>
+        <div class="product-img">
+        <!----Swiper----->
+        <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <!-----**1**---->
+            <div class="swiper-slide">
+                <img src="images/product_4.jpg"/>
+            </div>
+            <!-----**2**---->
+            <div class="swiper-slide">
+                <img src="images/product_4-a.jpg"/>
+            </div>
+            <!-----**3**---->
+            <div class="swiper-slide">
+                <img src="images/p-4.png"/>
+            </div>
+            <!-----**4**---->
+            <div class="swiper-slide">
+                <img src="images/product_4.jpg"/>
+            </div>
+            
+    </div>
+    <!-----btns----->
+    <div class="slider-btns">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    </div>
+            <!-----social---->
+            <div class="img-social-bar">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <!------text---->
+        <div class="product-text">
+            <!-----category---->
+            <span class="product-category">Electronics</span>
+            <!-----title----->
+            <h3>Iphone 14 Pro </h3>
+            <!-----price----->
+            <span class="product-price">$699.99</span>
+            <!-----details----->
+            <p><b>Product Description:</b> Experience the future of smartphones with the iPhone X, a groundbreaking device that redefines what a phone can do. Featuring a stunning 5.8-inch Super Retina display, this iPhone delivers unparalleled clarity, vibrant colors, and deep blacks, offering an immersive viewing experience like never before.
+              <br><br>
+              <b>Key Features:</b>
+              <br>
+              <li><b>Display: </b>5.8-inch Super Retina OLED display with a resolution of 2436 x 1125 pixels for stunning visual quality.</li>
+              <li><b>Camera: </b>Dual 12MP rear cameras with advanced optical image stabilization and a 7MP front camera for perfect selfies and FaceTime.</li>
+            <li><b>Face ID: </b>Securely unlock your phone, authenticate apps, and make payments with the innovative Face ID technology.</li>
+          <li><b>Performance: </b>Powered by the A11 Bionic chip with Neural Engine, delivering lightning-fast performance and efficiency.</li>
+          <li><b>Storage: </b>Available in multiple storage options, ensuring you have ample space for all your apps, photos, and videos.</li>
+          <li><b>Design: </b>Sleek, all-glass front and back with stainless steel edges, combining elegance with durability.</li>
+        <li><b>Battery Life: </b>All-day battery life with fast charging capability, ensuring you stay connected longer.</li><p>With its cutting-edge technology and elegant design, the iPhone X is more than just a phone—it's a statement of innovation. Elevate your smartphone experience by adding the iPhone X to your cart today!</p></p>
+            <!----size-container---->
+            <div class="product-size-container">
+                <strong>Select Size:</strong>
+                <!----size----->
+                <div class="product-size">
+                    <!----XL---->
+                    <input type="checkbox" class="s-checkbox" id="s-xl">
+                    <label for="s-xl" class="s-label">XL</label>
+                    <!----Small---->
+                    <input type="checkbox" class="s-checkbox" id="s-s">
+                    <label for="s-s" class="s-label">S</label>
+                    <!----Medium---->
+                    <input type="checkbox" class="s-checkbox" id="s-m">
+                    <label for="s-m" class="s-label">M</label>
+                    <!----Large---->
+                    <input type="checkbox" class="s-checkbox" id="s-l">
+                    <label for="s-l" class="s-label">L</label>
+                </div>
+            </div>
+            <!----btns----->
+            <div class="product-buttons">
+                <a href="#" class="add-bag-btn">Add to Cart</a>
+                <a href="#" class="add-wishlist-btn">Add to Wishlist</a>
+            </div>
+            <!-----help-btn----->
+            <a href="#" class="help-btn">Need Any Help?</a>
+        </div>
+    </div>
+  </section> 
+  
+  
+
+
+<!------JQuery------------->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+  <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script type="text/javascript">
+    $('.s-checkbox').on('change',function(){
+        $('.s-checkbox').not(this).prop('checked',false);
+    });
+
+    //Swiper Script
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        //after 450px screen slide pre view is "1"
+        450: {//apply after 820px and until before 450px
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        820: {//apply after 1024px and until before 820px
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        1024: {//apply before 1024px screen width
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+      },
+    });
+  </script>
+
+ 
+
+</body>
+</html>

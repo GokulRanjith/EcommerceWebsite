@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <br>
+    <img src="images/logo.png" alt="logo.jpg">
+    <div class="form">
+        <!-------login---->
+        <div class="login-form">
+            <!-------cancel-btn----->
+            <a href="index.html" class="form-cancel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                </svg> 
+            </a>
+            <!-------heading---->
+            <strong>Contact Us</strong>
+            <!-------inputs----->
+            <form>
+                <p>Name</p>
+                <input type="text" placeholder="Username" required>
+                <p>Email</p>
+                <input type="email" placeholder="Example@gmail.com" name="email" required>
+                <p>Message for Us</p>
+                <input type="text" placeholder="Message" name="Message" required>
+                <!----submit-btn---->
+                <input type="submit" value="Submit" id="submit">
+            </form>
+                <!-----forget-and-sign-up-btn---->
+                <div class="form-btns">
+                    <a href="#" class="forget">Forget Your Password?</a>
+                    <a href="#" class="sign-up-btn">Create Account</a>
+                </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#submit").click(function(){
+                alert("Your details have been submitted successfully.");
+            });
+        });
+        $(document).ready(function(){
+            $(".sign-up-btn").click(function(){
+                alert("This option will be available shortly.");
+            });
+        });
+    </script>
+</body>
+</html>

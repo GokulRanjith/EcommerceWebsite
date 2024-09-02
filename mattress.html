@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Luxury Memory Foam Mattress</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="css/product-details.css">
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      
+          body{
+              font-family:poppins;
+          }
+  </style>
+  <!------Font-awesome-for-icons------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .autoplay-progress {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 10;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--swiper-theme-color);
+      display: none;
+    }
+
+    .autoplay-progress svg {
+      --progress: 0;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      stroke-width: 4px;
+      stroke: var(--swiper-theme-color); 
+      fill: none;
+      stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+      stroke-dasharray: 125.6;
+      transform: rotate(-90deg);
+      display: none;
+    }
+    .img-social-bar{
+      background-color: #00000000;
+    }
+  </style>
+</head>
+
+<body>
+    <section class="product-page">
+        <div class="product-details">
+            <!----img------>
+            <div class="product-img">
+            <!----Swiper----->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/shop-7.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/shop-7_a.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/shop-7_b.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/shop-7.jpg" alt="">
+                    </div>
+                </div>
+                 <!-----btns----->
+                <div class="slider-btns">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                </div>
+                <!-----social---->
+            <div class="img-social-bar">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <!------text---->
+        <div class="product-text">
+            <!-----category---->
+            <span class="product-category">Furniture</span>
+            <!-----title----->
+            <h3>Luxury Memory Foam Mattress </h3>
+            <!-----price----->
+            <span class="product-price">$799.99</span>
+            <!-----details----->
+            <p><b>Description: </b> Sleep better on this luxury memory foam mattress, designed to contour to your body for maximum comfort and support.
+            <br><br>
+            <b>Price: </b>$799.99
+            <br><br>
+            <b>Featured Reason: </b>Highly reviewed with a 100-night trial period.
+            </p>
+            <!----size-container---->
+            <div class="product-size-container">
+                <strong>Select Size:</strong>
+                <!----size----->
+                <div class="product-size">
+                    <!----XL---->
+                    <input type="checkbox" class="s-checkbox" id="s-xl">
+                    <label for="s-xl" class="s-label">XL</label>
+                    <!----Small---->
+                    <input type="checkbox" class="s-checkbox" id="s-s">
+                    <label for="s-s" class="s-label">S</label>
+                    <!----Medium---->
+                    <input type="checkbox" class="s-checkbox" id="s-m">
+                    <label for="s-m" class="s-label">M</label>
+                    <!----Large---->
+                    <input type="checkbox" class="s-checkbox" id="s-l">
+                    <label for="s-l" class="s-label">L</label>
+                </div>
+            </div>
+            <!----btns----->
+            <div class="product-buttons">
+                <a href="#" class="add-bag-btn">Add to Cart</a>
+                <a href="#" class="add-wishlist-btn">Add to Wishlist</a>
+            </div>
+            <!-----help-btn----->
+            <a href="#" class="help-btn">Need Any Help?</a>
+        </div>
+    </div>
+  </section> 
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                </svg> 
+                <span></span>
+                </div>
+            </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-----JQuery---->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+ /*     pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },*/
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressCircle.style.setProperty("--progress", 1 - progress);
+          progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+        }
+      }
+    });
+
+    $('.s-checkbox').on('change',function(){
+      $('.s-checkbox').not(this).prop('checked', false);
+    });
+  </script>
+</body>
+
+</html>
