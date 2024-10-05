@@ -579,13 +579,17 @@ footer{
     }
     .search-input input,
     .search-cancel{
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
     .sale-box{
         height: 200px;
     }
+    .feature-box{
+        width: 100px;
+        height: 100px;
+    }
 }
-@media(max-width:600px){
+@media(max-width:768px){
     .navigation{
         padding: 10px;
     }
@@ -615,8 +619,8 @@ footer{
         font-size: 1.2rem;
     }
     .feature-box{
-        width: 120px;
-        height: 120px;
+        width: 50px;
+        height: 50px;
     }
     .new-arrival strong,
     .feature-heading strong{
